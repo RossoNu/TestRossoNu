@@ -1,0 +1,63 @@
+[
+  {
+    "type": "image",
+    "src": "images/index/hero/rosso-01.jpg",
+    "duration": 8000,
+    "enabled": false
+  },
+  {
+    "type": "image",
+    "src": "images/index/hero/rosso-02.jpg",
+    "duration": 8000,
+    "enabled": false
+  },
+  {
+    "type": "image",
+    "src": "images/index/hero/rosso-03.jpg",
+    "duration": 8000,
+    "enabled": false
+  },
+  {
+    "type": "image",
+    "src": "images/index/hero/blueflower-01-gleisner.jpg",
+    "duration": 8000,
+    "enabled": true
+  },
+  {
+    "type": "image",
+    "src": "images/index/hero/butterfly-01-gleisner.jpg",
+    "duration": 8000,
+    "enabled": true
+  },
+  {
+    "type": "image",
+    "src": "images/index/hero/forrest-01-gleisner.jpg",
+    "duration": 8000,
+    "enabled": true,
+    "position": "50% 70%"
+  },
+  {
+    "type": "image",
+    "src": "images/index/hero/forrest-sea-01-gleisner.jpg",
+    "duration": 8000,
+    "enabled": true
+  },
+  {
+    "type": "image",
+    "src": "images/index/hero/harbour-01-gleisner.jpg",
+    "duration": 8000,
+    "enabled": true
+  },
+  {
+    "type": "image",
+    "src": "images/index/hero/sunset-01-gleisner.jpg",
+    "duration": 8000,
+    "enabled": true
+  },
+  {
+    "type": "video",
+    "src": "images/index/hero/sunset.mp4",
+    "loops": 8,
+    "enabled": true
+  }
+]

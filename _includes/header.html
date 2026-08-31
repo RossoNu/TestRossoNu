@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Till startsidan">
+      <img class="brand-mark"
+           src="images/shared/red-crab.jpg"
+           alt="">
+      <span>
+        <strong>Rossö samhälls- och fritidsförening</strong>
+        <span>Saltblänk året om</span>
+      </span>
+    </a>
+
+    <nav aria-label="Huvudmeny">
+      <ul>
+        <li><a href="/"{% if page.url == "/" or page.url == "/index.html" %} aria-current="page"{% endif %}>Hem</a></li>
+        <li><a href="discover.html"{% if page.url == "/discover.html" %} aria-current="page"{% endif %}>Upptäck Rossö</a></li>
+        <li><a href="history.html"{% if page.url == "/history.html" %} aria-current="page"{% endif %}>Historia</a></li>
+        <li><a href="community.html"{% if page.url == "/community.html" %} aria-current="page"{% endif %}>Gemenskap</a></li>
+        <li><a href="move.html"{% if page.url == "/move.html" %} aria-current="page"{% endif %}>Flytta hit</a></li>
+        <li><a href="visit.html"{% if page.url == "/visit.html" %} aria-current="page"{% endif %}>Besöka Rossö</a></li>
+        <li><a href="about.html"{% if page.url == "/about.html" %} aria-current="page"{% endif %}>Om föreningen</a></li>
+        <li><a href="suggestions.html"{% if page.url == "/suggestions.html" %} aria-current="page"{% endif %}>Förslagslåda</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
