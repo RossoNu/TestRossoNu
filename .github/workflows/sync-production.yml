@@ -1,0 +1,40 @@
+name: Sync production to test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/sync-production.yml"
+      - "README.md"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out test repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone production repository
+        run: git clone --depth 1 https://github.com/RossoNu/RossoNu.git ../production
+
+      - name: Replace test content with production content
+        run: |
+          rsync -a --delete --exclude '.git/' ../production/ ./
+          printf 'test.rosso.nu\n' > CNAME
+
+      - name: Commit copied site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync production site to test"
+            git push origin main
+          fi
